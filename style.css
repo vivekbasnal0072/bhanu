@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --pink: #ff75a8;
+  --dark-pink: #d64f87;
+  --light-pink: #ffe6f0;
+  --text: #704256;
+  --white: #fffafd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe6f0, #fff3f8, #ffdce9);
+  color: var(--text);
+  text-align: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 7vw, 4rem);
+  line-height: 1.4;
+}
+
+h1 span {
+  font-family: 'Pacifico', cursive;
+  color: var(--dark-pink);
+}
+
+h2 {
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  color: #c34f7d;
+  margin-bottom: 15px;
+}
+
+p {
+  line-height: 1.8;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* FLOATING HEARTS */
+
+.floating-hearts {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.floating-hearts span {
+  position: absolute;
+  bottom: -60px;
+  font-size: 25px;
+  animation: floatUp 12s linear infinite;
+  opacity: 0.7;
+}
+
+.floating-hearts span:nth-child(1) {
+  left: 10%;
+}
+
+.floating-hearts span:nth-child(2) {
+  left: 28%;
+  animation-delay: 2s;
+}
+
+.floating-hearts span:nth-child(3) {
+  left: 48%;
+  animation-delay: 4s;
+}
+
+.floating-hearts span:nth-child(4) {
+  left: 68%;
+  animation-delay: 1s;
+}
+
+.floating-hearts span:nth-child(5) {
+  left: 83%;
+  animation-delay: 5s;
+}
+
+.floating-hearts span:nth-child(6) {
+  left: 95%;
+  animation-delay: 3s;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0) rotate(0);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.7;
+  }
+
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* KEEP CONTENT ABOVE BACKGROUND */
+
+.hero,
+.section,
+.final-section,
+.welcome {
+  position: relative;
+  z-index: 1;
+}
+
+/* WELCOME PAGE */
+
+.welcome {
+  max-width: 700px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.eyebrow {
+  color: #d76c98;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.intro {
+  max-width: 520px;
+  margin: 18px auto;
+  color: #80596c;
+}
+
+.birthday-photo {
+  width: 210px;
+  height: 210px;
+  margin: 30px auto;
+  border: 9px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 8px 30px #e68aaf66;
+}
+
+.birthday-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.envelope-area {
+  height: 180px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.letter {
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  transform: translateX(-50%);
+  background: transparent;
+  border: none;
+  font-size: 100px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.letter:hover {
+  transform: translateX(-50%) scale(1.15) rotate(8deg);
+}
+
+.hint {
+  font-size: 0.9rem;
+  color: #c34f7d;
+  font-weight: 600;
+}
+
+/* SURPRISE HERO */
+
+.hero {
+  padding: 80px 20px 50px;
+}
+
+.hero-decoration {
+  font-size: 35px;
+  margin-top: 25px;
+}
+
+/* ALL SECTIONS */
+
+.section {
+  max-width: 900px;
+  margin: 35px auto;
+  padding: 45px 20px;
+}
+
+.section > p {
+  margin-bottom: 25px;
+}
+
+/* PHOTO GALLERY */
+
+.gallery img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    border-radius: 10px;
+}
+
+.gallery figure {
+  background: white;
+  padding: 12px 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px #d87da633;
+  transform: rotate(-2deg);
+  transition: 0.3s;
+}
+
+.gallery figure:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.gallery figure:hover {
+  transform: rotate(0) scale(1.04);
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 7px;
+  display: block;
+}
+
+.gallery figcaption {
+  font-family: 'Pacifico', cursive;
+  color: #c34f7d;
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+/* VIDEO */
+
+.memory-video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px #d87da633;
+}
+
+/* PERSONAL LETTER */
+
+.letter-card {
+  max-width: 650px;
+  background: #fffaf5;
+  margin: 25px auto;
+  padding: 35px 28px;
+  border-radius: 5px 25px 5px 25px;
+  border-left: 5px solid #ff9fbd;
+  box-shadow: 0 8px 30px #d87da622;
+  text-align: left;
+  line-height: 2;
+}
+
+.letter-card p {
+  margin-bottom: 18px;
+}
+
+.signature {
+  font-family: 'Pacifico', cursive;
+  color: #d64f87;
+  font-size: 1.15rem;
+}
+
+/* REASONS BUTTONS */
+
+.reason-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 550px;
+  margin: 25px auto;
+}
+
+.reason {
+  border: 1px solid #ffc0d6;
+  background: #fff8fb;
+  color: #c34f7d;
+  padding: 17px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.reason:hover {
+  background: #ffd5e5;
+  transform: translateY(-4px);
+}
+
+.reason-message {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 550px;
+  margin: auto;
+  color: #c34f7d;
+  min-height: 65px;
+}
+
+/* BIRTHDAY CAKE */
+
+.cake-button {
+  background: white;
+  border: 2px solid #ffc1d8;
+  border-radius: 25px;
+  padding: 20px 40px;
+  cursor: pointer;
+  margin: 25px 0;
+  box-shadow: 0 8px 25px #d87da633;
+  transition: transform 0.3s;
+}
+
+.cake-button:hover {
+  transform: scale(1.1);
+}
+
+.cake {
+  display: block;
+  font-size: 85px;
+}
+
+.candle {
+  display: block;
+  font-size: 35px;
+  transition: 0.3s;
+}
+
+.cake-button.blown .candle {
+  opacity: 0.25;
+  transform: translateY(-12px);
+}
+
+#wish-message {
+  color: #c34f7d;
+  font-weight: 600;
+  min-height: 50px;
+}
+
+/* FINAL SECTION */
+
+.final-section {
+  padding: 75px 20px;
+  background: #ffd5e5;
+  border-radius: 50px 50px 0 0;
+}
+
+.final-section p {
+  max-width: 550px;
+  margin: 18px auto;
+}
+
+.final-section h1 {
+  font-family: 'Pacifico', cursive;
+  color: #d64f87;
+  font-size: 2.2rem;
+}
+
+.final-hearts {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.top-button {
+  background: #d64f87;
+  color: white;
+  border: none;
+  padding: 13px 25px;
+  border-radius: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 500px) {
+  .welcome {
+    padding-top: 45px;
+  }
+
+  .gallery {
+    gap: 12px;
+  }
+
+  .gallery figure {
+    padding: 8px 8px 14px;
+  }
+
+  .letter-card {
+    padding: 25px 20px;
+  }
+
+  .reason-list {
+    gap: 8px;
+  }
+
+  .reason {
+    padding: 13px 5px;
+    font-size: 0.8rem;
+  }
+
+  .section {
+    padding: 35px 16px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =================================
+   BIRTHDAY COLLAGE
+================================= */
+
+.collage-section {
+    padding-top: 40px;
+}
+
+.birthday-collage {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 12px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px #d87da655;
+    transition: 0.3s ease;
+}
+
+.birthday-collage:hover {
+    transform: scale(1.02);
+}
+
+.birthday-collage img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* =================================
+   FOUR PHOTO GALLERY
+================================= */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    max-width: 650px;
+    margin: 30px auto;
+}
+
+.gallery figure {
+    background: white;
+    padding: 10px 10px 15px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px #d87da633;
+    transition: transform 0.3s ease;
+    margin: 0;
+}
+
+.gallery figure:hover {
+    transform: translateY(-5px) rotate(1deg);
+}
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.gallery figcaption {
+    font-family: 'Pacifico', cursive;
+    color: #c34f7d;
+    margin-top: 10px;
+    font-size: 0.85rem;
+}
+
+/* =================================
+   VIDEO DESIGN
+================================= */
+
+.memory-video {
+    display: block;
+    width: 100%;
+    max-width: 550px;
+    max-height: 400px;
+    margin: 25px auto;
+    border-radius: 18px;
+    background: black;
+    box-shadow: 0 8px 25px #d87da633;
+}
+
+/* =================================
+   MOBILE RESPONSIVE
+================================= */
+
+@media (max-width: 500px) {
+
+    .birthday-collage {
+        padding: 8px;
+    }
+
+    .gallery {
+        gap: 10px;
+    }
+
+    .gallery figure {
+        padding: 7px 7px 12px;
+    }
+
+    .gallery figcaption {
+        font-size: 0.75rem;
+    }
+
+    .memory-video {
+        border-radius: 12px;
+    }
+}
+/* Bhanu's second photo */
+.gallery figure:nth-child(2) img {
+    object-fit: contain;
+    object-position: center top;
+    background: #ffe6f0;
+}
